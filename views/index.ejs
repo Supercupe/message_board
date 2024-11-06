@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1><%= title %></h1>
+  <ul>
+    <% messages.forEach((message, index) => { %>
+      <li>
+        <strong><%= message.user %>:</strong> <%= message.text %>
+        <a href="/message/<%= index %>">Open</a> <!-- Link to message details -->
+      </li>
+    <% }); %>
+  </ul>
+    <a class = "newMessage" href="/new">Add a New Message</a>
+</body>
+</html>
